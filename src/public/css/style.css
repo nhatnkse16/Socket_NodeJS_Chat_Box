@@ -1,0 +1,220 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+
+body {
+    font: normal normal 13px/16px "Open Sans", sans-serif;
+    background-color: rgb(179, 177, 177);
+}
+
+.container {
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: white;
+    border-radius: 5px;
+}
+
+form {
+    display: inline-block;
+}
+
+input {
+    padding: 4px 15px 4px 5px;
+}
+
+#register {
+    display: inline-block;
+    background-color: #fc999b;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2px;
+    padding: 5px 15px;
+}
+
+#register:hover {
+    opacity: .8;
+}
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#chatForm {
+    background-color: #ffffff;
+}
+
+hr {
+    margin-left: -100%;
+}
+
+.onl-card li {
+    list-style: none;
+    margin: 16px 0 16px 0;
+    font-weight: bold;
+}
+
+.chat li {
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    /* border-bottom: 1px dotted #B3A9A9; */
+    margin-top: 10px;
+    width: 80%;
+}
+
+
+.chat li .chat-body p {
+    margin: 0;
+    /* color: #777777; */
+}
+
+
+.chat-care {
+    overflow-y: scroll;
+    height: 350px;
+}
+
+.chat-care .chat-img {
+    width: 50px;
+    height: 50px;
+}
+
+.chat-care .img-circle {
+    border-radius: 50%;
+}
+
+.chat-care .chat-img {
+    display: inline-block;
+}
+
+.chat-care .chat-body {
+    display: inline-block;
+    max-width: 80%;
+    background-color: #FFC195;
+    border-radius: 12.5px;
+    padding: 15px;
+}
+
+.chat-care .chat-body strong {
+    color: #0169DA;
+}
+
+.chat-care .admin {
+    text-align: right;
+    float: right;
+}
+
+.chat-care .admin p {
+    text-align: left;
+}
+
+.chat-care .agent {
+    text-align: left;
+    float: left;
+}
+
+.chat-care .left {
+    float: left;
+}
+
+.chat-care .right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+/* TYPING ANIMATION*/
+
+@keyframes typing {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chat-bubble {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.typing-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: typing 1s infinite;
+    /* Thêm animation cho tất cả các chấm biểu diễn */
+}
+
+.typing-dot:nth-child(odd) {
+    animation-delay: 0.1s;
+    /* Tạo độ trễ cho chấm biểu diễn xen kẽ */
+}
+
+.chat-message {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding-left: 15px;
+    color: #555;
+}
+
+.chat-bubble::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.chat-bubble::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: typing 1s infinite;
+    /* Thêm animation cho pseudo-element */
+}
+
+.chat-bubble::after:nth-child(even) {
+    animation-delay: 0.1s;
+    /* Tạo độ trễ cho pseudo-element xen kẽ */
+}

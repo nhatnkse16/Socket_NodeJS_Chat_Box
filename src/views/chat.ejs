@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Demo Chat Socket</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container" id="enterName">
+            <h2>Input Your Chat Name</h2>
+            <form name="toDoList">
+                <input type="text" name="ListItem" id="userName" />
+                <button type="button" id="register">Join</button>
+            </form>
+            <br />
+            <ol></ol>
+        </div>
+
+        <div class="container-fluid" id="chatForm">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="onl-card">
+                        <div class="card-header text-center">
+                            <span>Online Users</span>
+                        </div>
+                        <div class="card-body chat-care">
+                            <ul id="online-Users">
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <p>Hello <span id="welcome-Users"></span></p>
+                                <br>
+                                <span class="input-group-btn">
+                                    <button type="button" id="btn-logout" class="btn btn-primary">Logout</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Card - Placed on the right -->
+                <div class="col-md-9">
+                    <div class="chat-card">
+                        <div class="card-header text-center">
+                            <span>Chat Box</span>
+                        </div>
+                        <div class="card-body chat-care">
+                            <ul id="message-list" class="chat">
+                            </ul>
+                            <ul id="message-typing" class="chat">
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <input id="input-message" type="text" class="form-control input-sm"
+                                    placeholder="Type your message here..." />
+                                <button type="button" class="btn btn-primary" id="send-chat">Send</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="socket.io/socket.io.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="/js/script.js"></script>
+
+</html>
